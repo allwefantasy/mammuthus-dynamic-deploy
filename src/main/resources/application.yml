@@ -1,0 +1,30 @@
+mode:
+    production
+
+production:
+    datasources:
+        mysql:
+            disable: true
+        mongodb:
+           disable: true
+        redis:
+           disable: true
+
+application:
+    controllerNames: mammuthus.deploy.dynamic.controller.master.DynamicMasterController
+    static:
+           enable: true
+    template:
+        engine:
+           enable: false
+
+###############http config##################
+http:
+    port: 9003
+    disable: false
+#    class:
+#        port: mammuthus.deploy.dynamic.service.slave.RandomPortGenerator
+thrift:
+    disable: true
+dubbo:
+    disable: true
